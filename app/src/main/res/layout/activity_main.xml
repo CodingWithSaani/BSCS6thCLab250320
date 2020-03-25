@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the document id"
+        android:id="@+id/documentIDET"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:nextFocusDown="@id/noOfRoomsET"/>
+
+    <EditText
+        android:layout_below="@id/documentIDET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the number of rooms"
+        android:id="@+id/noOfRoomsET"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:nextFocusDown="@id/nameOfRestaurantET"/>
+
+    <EditText
+        android:layout_below="@id/noOfRoomsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Name of restaurant"
+        android:id="@+id/nameOfRestaurantET"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:nextFocusDown="@id/locationOfHotelET"/>
+
+    <EditText
+        android:layout_below="@id/nameOfRestaurantET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Location of Hotel"
+        android:id="@+id/locationOfHotelET"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:layout_below="@id/locationOfHotelET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addValues"
+        android:text="Add Values"
+        android:onClick="addValuesToFireStore"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/collectionValuesTV"
+        android:layout_below="@id/addValues"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"/>
+
+
+    <Button
+        android:layout_below="@id/collectionValuesTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getValues"
+        android:text="Get Values"
+        android:onClick="getValuesFromCollection"/>
+
+    <Button
+        android:layout_below="@id/getValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateValues"
+        android:text="Update Values"
+        android:onClick="updateValue"/>
+
+    <Button
+        android:layout_below="@id/updateValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteValues"
+        android:text="Delete Values"
+        android:onClick="deleteValue"/>
+
+
+
+
+</RelativeLayout>
